@@ -21,7 +21,7 @@ RUN apt-get install -y \
 # Add WineHQ repository key and APT source
 RUN wget -q https://dl.winehq.org/wine-builds/winehq.key \
     && apt-key add winehq.key \
-    && add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ bullseye main' \
+    && add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ bookworm main' \
     && rm winehq.key
 
 # Add i386 architecture and update package lists
