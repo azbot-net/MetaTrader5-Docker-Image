@@ -14,9 +14,8 @@ RUN apt-get update && apt-get upgrade -y
 
 # Install required packages
 RUN apt-get install -y \
-    python3-pip \
     wget \
-    && pip3 install --upgrade pip
+    nano 
 
 # Add WineHQ repository key and APT source
 RUN wget -q https://dl.winehq.org/wine-builds/winehq.key \
@@ -39,5 +38,4 @@ COPY /Metatrader /Metatrader
 RUN chmod +x /Metatrader/start.sh
 COPY /root /
 
-EXPOSE 3000 8001
-VOLUME /config
+EXPOSE 3000
