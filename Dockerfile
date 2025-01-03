@@ -15,7 +15,9 @@ RUN apt-get update && apt-get upgrade -y
 # Install required packages
 RUN apt-get install -y \
     wget \
-    nano 
+    #python3 \
+    #python3-pip \
+    nano
 
 # Add WineHQ repository key and APT source
 RUN wget -q https://dl.winehq.org/wine-builds/winehq.key \
